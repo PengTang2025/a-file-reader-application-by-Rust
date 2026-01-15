@@ -41,6 +41,12 @@ By completing this lab, you will gain practical experience in Rust by extending 
 
 
 ### Usage
-
+`cargo run ./src/docs/readfile.txt`
 
 ### Experiment Notes for this project
+The method for string passing: `.clone()`
+`
+let args: Vec<String> = env::args().collect();
+println!("File path is {}.", args[1]);
+let file = File::open(args[1].clone());
+`
